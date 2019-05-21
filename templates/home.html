@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Query Expansion</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="/static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/freelancer.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Query Expansion</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button"
+                data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">  
+                </form>            
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<br/><br/><br/><br/><br/>
+
+<div class="container">
+    <h3 class="text-uppercase mb-0" align="center">Query Expansion pada Biografi</h3>
+    <br>
+    <br>
+          <form method="post" action="/cari" class="masthead bg-primary text-white text-center">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Masukkan Pencarian" aria-label="Search"
+                            aria-describedby="button-addon2" name="search_input" width="500px">
+                        <div class="input-group-append">
+                            <input class="btn btn-outline-primary" type="submit" id="search" value="Search">
+                        </div>
+                    </div>
+          </form>
+      </header>
+ </form> 
+      <div class="copyright py-4 text-center text-white fixed-bottom">
+        <div class="container"></div>
+      </div>
+      
+      <table width="500px" align="center">
+        <p align="center">Query : {{qs}}</p>
+          <thead>
+            <tr class="table table-primary">
+              <th>ID Dokumen</th>
+              <th>Judul Dokumen</th>
+            </tr>
+          </thead>
+          {% for i in hasil %}
+          <tbody>
+            <tr>      
+              <td align="center">{{i.1}}</td>
+              <td><a href="{{url_for('static', filename='biografi/'+i.0)}}">{{i.0}}</a></td>
+            </tr>             
+          </tbody>
+          {% endfor %}
+      </table>
+</div>
+
+<div class="copyright py-4 text-center text-white fixed-bottom">
+    <div class="container">
+      
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="/static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<!-- Contact Form JavaScript -->
+<script src="/static/js/jqBootstrapValidation.js"></script>
+<script src="/static/js/contact_me.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="/static/js/freelancer.min.js"></script>
+
+</body>
+
+</html>
